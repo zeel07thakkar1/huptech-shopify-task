@@ -98,18 +98,21 @@
           "slide-0": {
             "type": "image",
             "settings": {
+              "slide": "shopify:\/\/shop_images\/urban-fashion.jpg",
               "link": ""
             }
           },
           "slide-1": {
             "type": "image",
             "settings": {
+              "slide": "shopify:\/\/shop_images\/black-friday-signage.jpg",
               "link": ""
             }
           },
           "slide-2": {
             "type": "image",
             "settings": {
+              "slide": "shopify:\/\/shop_images\/minimalist-retail-clothing-display.jpg",
               "link": ""
             }
           }
