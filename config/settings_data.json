@@ -46,8 +46,11 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "",
-          "logo_max_width": "305"
+          "menu": "main-menu",
+          "logo_max_width": "305",
+          "show_announcement": false,
+          "announcement_text": "Announce something here",
+          "announcement_link": ""
         }
       },
       "footer": {
@@ -73,6 +76,7 @@
             "type": "newsletter",
             "settings": {
               "title": "Newsletter",
+              "subtext": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
               "width": "33%"
             }
           }
@@ -84,6 +88,7 @@
         ],
         "settings": {
           "social_enabled": false,
+          "show_payment_icons": true,
           "legal_menu": ""
         }
       },
@@ -93,21 +98,18 @@
           "slide-0": {
             "type": "image",
             "settings": {
-              "slide": "",
               "link": ""
             }
           },
           "slide-1": {
             "type": "image",
             "settings": {
-              "slide": "",
               "link": ""
             }
           },
           "slide-2": {
             "type": "image",
             "settings": {
-              "slide": "",
               "link": ""
             }
           }
@@ -128,7 +130,7 @@
           "collection-list-0": {
             "type": "collection",
             "settings": {
-              "collection": ""
+              "collection": "coats-jackets"
             }
           },
           "collection-list-1": {
@@ -148,25 +150,34 @@
       "collection-row-1": {
         "type": "collection-rows",
         "settings": {
+          "title": "Featured collection",
           "home_featured_row": "",
           "grid": 4,
-          "rows": 1
+          "rows": 1,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": false
         }
       },
       "collection-row-2": {
         "type": "collection-rows",
         "settings": {
+          "title": "Featured collection",
           "home_featured_row": "",
           "grid": 4,
-          "rows": 1
+          "rows": 1,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": false
         }
       },
       "collection-row-3": {
         "type": "collection-rows",
         "settings": {
+          "title": "Featured collection",
           "home_featured_row": "",
           "grid": 4,
-          "rows": 1
+          "rows": 1,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": false
         }
       }
     },
