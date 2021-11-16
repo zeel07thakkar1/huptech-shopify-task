@@ -48,8 +48,8 @@
         "settings": {
           "menu": "main-menu",
           "logo_max_width": "305",
-          "show_announcement": false,
-          "announcement_text": "Announce something here",
+          "show_announcement": true,
+          "announcement_text": "Black Friday sale!!",
           "announcement_link": ""
         }
       },
