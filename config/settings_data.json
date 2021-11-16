@@ -136,13 +136,36 @@
           "collection-list-1": {
             "type": "collection",
             "settings": {
+              "collection": "beauty"
+            }
+          },
+          "8a4ae04a-4bb8-44ef-845a-17ffc5bf7f17": {
+            "type": "collection",
+            "settings": {
+              "collection": "dresses"
+            }
+          },
+          "c156ab38-3a57-420a-a860-59000a6e4932": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": ""
+            }
+          },
+          "02cd06b9-a8ae-41fc-93b4-edd89547daad": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
               "collection": ""
             }
           }
         },
         "block_order": [
           "collection-list-0",
-          "collection-list-1"
+          "collection-list-1",
+          "8a4ae04a-4bb8-44ef-845a-17ffc5bf7f17",
+          "c156ab38-3a57-420a-a860-59000a6e4932",
+          "02cd06b9-a8ae-41fc-93b4-edd89547daad"
         ],
         "settings": {
         }
