@@ -159,6 +159,7 @@
       },
       "collection-row-1": {
         "type": "collection-rows",
+        "disabled": true,
         "settings": {
           "title": "Featured collection",
           "home_featured_row": "",
@@ -170,6 +171,7 @@
       },
       "collection-row-2": {
         "type": "collection-rows",
+        "disabled": true,
         "settings": {
           "title": "Featured collection",
           "home_featured_row": "",
@@ -181,6 +183,7 @@
       },
       "collection-row-3": {
         "type": "collection-rows",
+        "disabled": true,
         "settings": {
           "title": "Featured collection",
           "home_featured_row": "",
@@ -189,6 +192,18 @@
           "product_show_saved_amount": true,
           "product_show_compare_at_price": false
         }
+      },
+      "16371942571b06bc63": {
+        "type": "collection-slider1",
+        "settings": {
+          "title": "Featured Collection",
+          "richtext": "<p>Use this text to add information about Featured collection with your customers.<\/p>",
+          "collection": "beauty",
+          "collection2": "coats-jackets",
+          "collection3": "dresses",
+          "add_to_cart_button_size": "small",
+          "product_count": 4
+        }
       }
     },
     "content_for_index": [
@@ -196,7 +211,8 @@
       "collection-list",
       "collection-row-1",
       "collection-row-2",
-      "collection-row-3"
+      "collection-row-3",
+      "16371942571b06bc63"
     ]
   },
   "presets": {
