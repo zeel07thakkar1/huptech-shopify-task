@@ -1,32 +1,19 @@
-
 $(document).ready(function () {
    console.log('All assets are loaded');
-  
-
-  
    $('.tab1').on('click', function () {
-
-     
       $('.collection_1').fadeIn();
       $('.collection_2').hide();
       $('.collection_3').hide();
       
    });
 
-   
-
    $('.tab2').on('click', function () {
-
-     
       $('.collection_2').fadeIn();
       $('.collection_1').hide();
       $('.collection_3').hide();
    });
 
-
    $('.tab3').on('click', function () {
-
-      
       $('.collection_3').fadeIn();
       $('.collection_1').hide();
       $('.collection_2').hide();
@@ -37,7 +24,7 @@ $(document).ready(function () {
       center:false,
       mouseDrag:true,
       touchDrag:true,
-      navText:["<span><i class='jt-arrow left-icon'></i></span>","<span><i class='jt-arrow right-icon'></i></span>"],
+      navText:["<span><i class='fa fa-chevron-left'></i></span>","<span><i class='fa fa-chevron-right'></i></span>"],
       margin:10,
       nav:true,
       dots:true,
@@ -56,13 +43,4 @@ $(document).ready(function () {
           }
       }
   });
-
-
-  
-
-
 });
-
-
-  
-  

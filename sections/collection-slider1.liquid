@@ -21,26 +21,24 @@
 {% endif %}
 
 
-
-<!------------cat 1---------->
-
-    {% if section.settings.title != blank %}
+{% if section.settings.title != blank %}
     <div class="section-header text-center">
         <h2>{{ section.settings.title | escape }}</h2>
     </div>
-    {% endif %}
+{% endif %}
 
 
-    {% if section.settings.richtext != blank %}
+{% if section.settings.richtext != blank %}
     {{ section.settings.richtext }}
     {% else %}
     <p>{{ 'layout.footer.instructions_for_text_content_html' | t: theme_settings_link: theme_settings_link }}</p>
-    {% endif %}
+{% endif %}
+
+<!-------- Tab Section (snippet)-------------->
+{% include 'collection-tab' %}
 
 
-    {% include 'collection-tab' %}
-
-
+<!------------cat 1---------->
 <div class="featured-collection-slider page-width collection_1">
     {%- assign collection = collections[section.settings.collection] -%}
     {%- assign product_limit = section.settings.product_count -%}
@@ -52,25 +50,19 @@
                 <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
                 <h4>{{ product.title }}</h4>
                 <p>{{ product.price | money }}</p>
-                
-                <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
-                    <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
-                      <span class="icon icon-cart"></span>
-                      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
-                    </button>
-          
-                    {% if section.settings.enable_payment_button %}
-                      {{ form | payment_button }}
-                    {% endif %}
-                  </div>
             </a>
+
+              <form method="post" action="/cart/add">
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                <input type="submit" value="Add to cart" class="btn" />
+              </form>
         </div>
         {% endfor %}
     </div>
 </div>
 
 
-
+<!------------cat 2---------->
 <div class="featured-collection-slider page-width collection_2">
 
 
@@ -84,27 +76,18 @@
                 <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
                 <h4>{{ product.title }}</h4>
                 <p>{{ product.price | money }}</p>
-
-                <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
-                    <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
-                      <span class="icon icon-cart"></span>
-                      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
-                    </button>
-          
-                    {% if section.settings.enable_payment_button %}
-                      {{ form | payment_button }}
-                    {% endif %}
-                  </div>
             </a>
+            <form method="post" action="/cart/add">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+              <input type="submit" value="Add to cart" class="btn" />
+            </form>
         </div>
         {% endfor %}
     </div>
 </div>
 
 
-
-
-
+<!------------cat 3---------->
 <div class="featured-collection-slider page-width collection_3">
 
 
@@ -118,25 +101,15 @@
                 <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
                 <h4>{{ product.title }}</h4>
                 <p>{{ product.price | money }}</p>
-
-                <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
-                    <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
-                      <span class="icon icon-cart"></span>
-                      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
-                    </button>
-          
-                    {% if section.settings.enable_payment_button %}
-                      {{ form | payment_button }}
-                    {% endif %}
-                  </div>
             </a>
+            <form method="post" action="/cart/add">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+              <input type="submit" value="Add to cart" class="btn" />
+            </form>
         </div>
         {% endfor %}
     </div>
 </div>
-
-
-
 
 
 {% schema %}
