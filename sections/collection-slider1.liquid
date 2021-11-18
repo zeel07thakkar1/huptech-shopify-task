@@ -1,0 +1,230 @@
+<div id="ProductSection" data-section-id="{{ section.id }}" data-section-type="product-template" data-zoom-toggle="zoom-in" data-zoom-enabled="{{ section.settings.product_image_zoom_enable }}" data-related-enabled="{{ section.settings.product_related_enable }}" data-social-sharing="{{ section.settings.social_sharing }}" data-show-compare-at-price="{{ section.settings.product_show_compare_at_price }}" data-stock="{{ section.settings.product_quantity_message }}" data-incoming-transfer="{{ section.settings.product_incoming_message }}" data-ajax-cart-method="{{ settings.ajax_cart_method }}">
+</div>
+
+
+
+{% case section.settings.add_to_cart_button_size %}
+{% when 'small' %}
+  {% assign btn_class = 'btn' %}
+{% when 'medium' %}
+  {% assign btn_class = 'btn btn--wide' %}
+{% when 'large' %}
+  {% assign btn_class = 'btn btn--full btn--large' %}
+{% endcase %}
+
+{% if section.settings.add_to_cart_button_size == 'large' %}
+<style>
+  .selector-wrapper select, .product-variants select {
+    max-width: 100%;
+  }
+</style>
+{% endif %}
+
+
+
+<!------------cat 1---------->
+
+    {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+        <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+    {% endif %}
+
+
+    {% if section.settings.richtext != blank %}
+    {{ section.settings.richtext }}
+    {% else %}
+    <p>{{ 'layout.footer.instructions_for_text_content_html' | t: theme_settings_link: theme_settings_link }}</p>
+    {% endif %}
+
+
+    {% include 'collection-tab' %}
+
+
+<div class="featured-collection-slider page-width collection_1">
+    {%- assign collection = collections[section.settings.collection] -%}
+    {%- assign product_limit = section.settings.product_count -%}
+
+    <div class="products-carousel owl-carousel owl-theme owl-products-carousel-slider2 owl-loaded owl-drag">
+        {% for product in collection.products limit: product_limit %}
+        <div class="product_item">
+            <a href="{{ product.url | within: collection }}">
+                <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
+                <h4>{{ product.title }}</h4>
+                <p>{{ product.price | money }}</p>
+                
+                <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
+                    <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
+                      <span class="icon icon-cart"></span>
+                      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+                    </button>
+          
+                    {% if section.settings.enable_payment_button %}
+                      {{ form | payment_button }}
+                    {% endif %}
+                  </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<div class="featured-collection-slider page-width collection_2">
+
+
+    {%- assign collection2 = collections[section.settings.collection2] -%}
+    {%- assign product_limit = section.settings.product_count -%}
+
+    <div class="products-carousel products-carousel owl-carousel owl-theme owl-products-carousel-slider2 owl-loaded owl-drag">
+        {% for product in collection2.products limit: product_limit %}
+        <div class="product_item">
+            <a href="{{ product.url | within: collection2 }}">
+                <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
+                <h4>{{ product.title }}</h4>
+                <p>{{ product.price | money }}</p>
+
+                <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
+                    <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
+                      <span class="icon icon-cart"></span>
+                      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+                    </button>
+          
+                    {% if section.settings.enable_payment_button %}
+                      {{ form | payment_button }}
+                    {% endif %}
+                  </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+<div class="featured-collection-slider page-width collection_3">
+
+
+    {%- assign collection3 = collections[section.settings.collection3] -%}
+    {%- assign product_limit = section.settings.product_count -%}
+
+    <div class="products-carousel products-carousel owl-carousel owl-theme owl-products-carousel-slider2 owl-loaded owl-drag">
+        {% for product in collection3.products limit: product_limit %}
+        <div class="product_item">
+            <a href="{{ product.url | within: collection3 }}">
+                <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
+                <h4>{{ product.title }}</h4>
+                <p>{{ product.price | money }}</p>
+
+                <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
+                    <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
+                      <span class="icon icon-cart"></span>
+                      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+                    </button>
+          
+                    {% if section.settings.enable_payment_button %}
+                      {{ form | payment_button }}
+                    {% endif %}
+                  </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+{% schema %}
+{
+"name": "Collection Slider",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Featured Collection"
+},
+{
+    "type": "richtext",
+    "id": "richtext",
+    "label": {
+
+    "en": "Description"
+},
+    "default": {
+
+        "en": "<p>Use this text to add information about Featured collection with your customers.</p>"
+    }
+},
+{
+    "type": "collection",
+    "id": "collection",
+    "label": "Collection1"
+},
+{
+    "type": "collection",
+    "id": "collection2",
+    "label": "Collection2"
+},
+{
+    "type": "collection",
+    "id": "collection3",
+    "label": "Collection3"
+},
+{
+    "type": "select",
+    "id": "add_to_cart_button_size",
+    "label": {
+     
+      "en": "Variant picker and button size"
+    },
+    "default": "small",
+    "options": [
+      {
+        "value": "small",
+        "label": {
+         
+          "en": "Small"
+        }
+      },
+      {
+        "value": "medium",
+        "label": {
+         
+          "en": "Medium"
+          
+        }
+      },
+      {
+        "value": "large",
+        "label": {
+         
+          "en": "Large"
+         
+        }
+      }
+    ]
+},
+{
+"type": "range",
+"id": "product_count",
+"min": 4,
+"max": 12,
+"label": "Number of products to display",
+"default": 4
+}
+],
+"presets": [
+{
+"category": "Collection",
+"name": "Collection Slider",
+"settings": {}
+}
+]
+}
+{% endschema %}
