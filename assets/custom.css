@@ -1,0 +1,131 @@
+.announcment_bar {
+  color: yellow;
+  text-align: center;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-custom-item {
+  padding-left: 0;
+}
+
+.grid-uniform.grid-custom-uniform {
+ margin: 30px 0px 100px 0px;
+}
+
+.grid-custom-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.grid-sub-div {
+  cursor: pointer;
+  padding: 11px;
+  width: 20%;
+  box-shadow: 1px 1px 6px 2px #ededed;
+  height: 170px;
+  position: relative;
+  transition: 0.9s all ease-in;
+}
+.grid-sub-div:hover
+{
+  transform: scale(0.9);
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+ 
+}
+
+.grid-sub-div .tab_img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.grid-sub-div h2 {
+  
+  text-align: center;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.collection_2, .collection_3 {
+  display: none;
+}
+
+.featured-collection-slider .owl-carousel .owl-item img {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.featured-collection-slider .product_item {
+  border: 1px solid #f3f1f1;
+  text-align: center;
+  padding: 10px;
+}
+
+.products-carousel.owl-products-carousel-slider2 .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.products-carousel.owl-products-carousel-slider2 .owl-nav .owl-prev {
+  position: absolute;
+  left: -25px;
+  background: #182d49;
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.products-carousel.owl-products-carousel-slider2 .owl-nav .owl-next {
+  position: absolute;
+  right: -25px;
+  background: #182d49;
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.featured-collection-slider {
+  margin: 0 auto;
+}
+
+.products-carousel img.img-explore {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 920px) {
+  .featured-collection-slider {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .featured-collection-slider .carousel-cell {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .featured-collection-slider .carousel-cell {
+    width: 100%;
+  }
+
+  .grid-sub-div
+  {
+    width: 28%;
+    height: 125px;
+  }
+  .grid-sub-div .tab_img {
+    height: 35%;
+  }
+  .grid-sub-div h2
+  {
+    font-size: small;
+  }
+
+}

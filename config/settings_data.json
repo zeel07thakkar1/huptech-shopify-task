@@ -46,8 +46,11 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "",
-          "logo_max_width": "305"
+          "menu": "main-menu",
+          "logo_max_width": "305",
+          "show_announcement": false,
+          "announcement_text": "Black Friday sale!!",
+          "announcement_link": ""
         }
       },
       "footer": {
@@ -73,6 +76,7 @@
             "type": "newsletter",
             "settings": {
               "title": "Newsletter",
+              "subtext": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
               "width": "33%"
             }
           }
@@ -84,6 +88,7 @@
         ],
         "settings": {
           "social_enabled": false,
+          "show_payment_icons": true,
           "legal_menu": ""
         }
       },
@@ -93,21 +98,21 @@
           "slide-0": {
             "type": "image",
             "settings": {
-              "slide": "",
+              "slide": "shopify:\/\/shop_images\/urban-fashion.jpg",
               "link": ""
             }
           },
           "slide-1": {
             "type": "image",
             "settings": {
-              "slide": "",
+              "slide": "shopify:\/\/shop_images\/black-friday-signage.jpg",
               "link": ""
             }
           },
           "slide-2": {
             "type": "image",
             "settings": {
-              "slide": "",
+              "slide": "shopify:\/\/shop_images\/minimalist-retail-clothing-display.jpg",
               "link": ""
             }
           }
@@ -128,45 +133,76 @@
           "collection-list-0": {
             "type": "collection",
             "settings": {
-              "collection": ""
+              "collection": "coats-jackets"
             }
           },
           "collection-list-1": {
             "type": "collection",
             "settings": {
-              "collection": ""
+              "collection": "beauty"
+            }
+          },
+          "8a4ae04a-4bb8-44ef-845a-17ffc5bf7f17": {
+            "type": "collection",
+            "settings": {
+              "collection": "dresses"
             }
           }
         },
         "block_order": [
           "collection-list-0",
-          "collection-list-1"
+          "collection-list-1",
+          "8a4ae04a-4bb8-44ef-845a-17ffc5bf7f17"
         ],
         "settings": {
         }
       },
       "collection-row-1": {
         "type": "collection-rows",
+        "disabled": true,
         "settings": {
+          "title": "Featured collection",
           "home_featured_row": "",
           "grid": 4,
-          "rows": 1
+          "rows": 1,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": false
         }
       },
       "collection-row-2": {
         "type": "collection-rows",
+        "disabled": true,
         "settings": {
+          "title": "Featured collection",
           "home_featured_row": "",
           "grid": 4,
-          "rows": 1
+          "rows": 1,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": false
         }
       },
       "collection-row-3": {
         "type": "collection-rows",
+        "disabled": true,
         "settings": {
+          "title": "Featured collection",
           "home_featured_row": "",
           "grid": 4,
-          "rows": 1
+          "rows": 1,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": false
+        }
+      },
+      "16371942571b06bc63": {
+        "type": "collection-slider1",
+        "settings": {
+          "title": "Featured Collection",
+          "richtext": "<p>Use this text to add information about Featured collection with your customers.<\/p>",
+          "collection": "beauty",
+          "collection2": "coats-jackets",
+          "collection3": "dresses",
+          "add_to_cart_button_size": "small",
+          "product_count": 4
         }
       }
     },
@@ -175,7 +211,8 @@
       "collection-list",
       "collection-row-1",
       "collection-row-2",
-      "collection-row-3"
+      "collection-row-3",
+      "16371942571b06bc63"
     ]
   },
   "presets": {
